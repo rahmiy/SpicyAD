@@ -58,13 +58,6 @@
 
 ---
 
-## TODO
-- Delegations attack
-- SCCM enumeration
-- More ADCS
-- Better share enumeration...
-
-
 ## Disclaimer: This tool was created using my knowledge of Kerberos and Active Directory, together with assistance from Claude-Code. We may be wrong, so research, test, and modify as needed, it’s your responsibility :)
 
 ## Description
@@ -986,27 +979,6 @@ dir \\SERVER\C$
 
 ## References
 
-### Hashcat Modes
-
-| Attack | Hashcat Mode | Example |
-|--------|--------------|---------|
-| Kerberoast RC4 | 13100 | `hashcat -m 13100 hash.txt wordlist.txt` |
-| Kerberoast AES128 | 19600 | `hashcat -m 19600 hash.txt wordlist.txt` |
-| Kerberoast AES256 | 19700 | `hashcat -m 19700 hash.txt wordlist.txt` |
-| AS-REP Roast | 18200 | `hashcat -m 18200 hash.txt wordlist.txt` |
-
-### Certificate Vulnerabilities
-
-| ESC | Description | Condition |
-|-----|-------------|-----------|
-| ESC1 | Enrollee Supplies Subject | Template allows requestor to specify SAN + Client Auth EKU |
-| ESC2 | Any Purpose EKU | Template has "Any Purpose" or no EKU restrictions |
-| ESC3 | Certificate Request Agent | Template allows enrollment agent attacks |
-| ESC4 | Template Misconfiguration | Low-privileged users have write access to template |
-| ESC8 | Web Enrollment | HTTP-based enrollment endpoints (NTLM relay) |
-
-### Tools
-
 | Tool | Author | Description |
 |------|--------|-------------|
 | [Rubeus](https://github.com/GhostPack/Rubeus) | @harmj0y | Kerberos abuse toolkit |
@@ -1037,3 +1009,9 @@ YOU, the real infosec gurus, from whom I have learned so much. (Eldar samir,
 ## License
 
 For educational and authorized security testing purposes only.
+
+## TODO
+- Delegations attack
+- SCCM enumeration
+- More ADCS
+- Better share enumeration...
